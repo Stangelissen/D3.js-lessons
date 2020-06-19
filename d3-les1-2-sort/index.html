@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+	</head>
+	<body>
+		Hola!
+
+		<script>
+
+		d3.csv("data/data.csv", function(dataset) {
+			d3.select("body")
+				.selectAll("div")
+				.data(dataset)
+				.enter()
+				.append("div")
+				.html(function(d){
+					return d.Gemeenten + "=" +d.TotaleBevolking100_1;
+
+				})
+			
+		})
+
+
+		// //Voorbeeld #1: for... in
+
+		// 	var d = { "ID": 1, "Naam" : "Rotterdam", "Inwoners": "633.000"};
+
+		// 	for(x in d){
+		// 	alert(x + "=" + d[x]);
+		//  }
+
+		//Voorbeeld #2: sort()
+
+			// var d = ["azul", "blanco", "amarillo", "negro"];
+			// d.sort();
+			// alert(d[0]);
+
+		//Voorbeeld #3: sort()
+
+			// var d = [10, 100, 5, 40];
+			// d.sort(); //this doesn't work!!! you get 10 in the first position
+			// alert(d[0]); 
+
+			//de goede manier is:
+
+			// d.sort(function(a,b){
+			// 	return a-b;
+			// 	//return b-a; //descending
+			// })
+			
+			// alert(d[0]); //it works! here you get 5!
+
+
+		//Voorbeeld #4: sort() met array van objecten
+
+			/*var d = [{ "color": "azul" }, { "color": "blanco" }, { "color": "amarillo" }, { "color": "negro" }];
+			
+			d.sort(function(a,b){
+				return a["color"].localeCompare(b["color"]);
+			});
+			
+			alert(d[0].color); //object color: amarillo!*/
+
+
+
+		</script>
+	</body>
+</html>
