@@ -1,5 +1,5 @@
 # D3.js-lessons
-d3.js opdrachten van mijn minor: Meningfull Data Design.
+d3.js opdrachten van mijn minor: Meaningfull Data Design.
 
 
 To see the result:
